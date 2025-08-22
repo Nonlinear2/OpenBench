@@ -1,6 +1,6 @@
 {
     "private" : false,
-    "nps"     : 1400000,
+    "nps"     : 1000000,
     "source"  : "https://github.com/Nonlinear2/Bread-Engine",
 
     "build" : {
@@ -37,14 +37,14 @@
             "both_options"      : "Threads=1 Hash=32",
             "both_time_control" : "8.0+0.08",
             "workload_size"     : 32,
-            "test_bounds"       : "[-5.00, 0.00]"
+            "test_bounds"       : "[-8.00, 0.00]"
         },
 
         "LTC nonreg" : {
             "both_options"      : "Threads=1 Hash=128",
             "both_time_control" : "40.0+0.4",
             "workload_size"     : 8,
-            "test_bounds"       : "[-5.00, 0.00]"
+            "test_bounds"       : "[-8.00, 0.00]"
         },
 
         "STC Prog" : {
@@ -67,10 +67,11 @@
     "tune_presets" : {
 
         "default" : {
-            "book_name" : "Pohl.epd",
-            "win_adj"   : "movecount=3 score=400",
-            "draw_adj"  : "movenumber=40 movecount=8 score=10",
-            "spsa_iterations" : 2500
+            "both_options"      : "Threads=1 Hash=16",
+            "book_name"         : "Pohl.epd",
+            "win_adj"           : "movecount=3 score=400",
+            "draw_adj"          : "movenumber=40 movecount=8 score=10",
+            "spsa_iterations"   : 2500
         }
     },
 
