@@ -7,7 +7,7 @@
         "path"      : "",
         "compilers" : ["clang++", "g++"],
         "cpuflags"  : ["POPCNT", "AVX2"],
-        "systems"   : ["Windows"]
+        "systems"   : ["Windows", "Linux"]
     },
 
     "test_presets" : {
@@ -83,9 +83,10 @@
             "workload_size" : 128
         },
 
-        "40k Nodes" : {
+        "5k Nodes" : {
             "both_options"      : "Threads=1 Hash=16",
-            "both_time_control" : "N=40000"
+            "both_time_control" : "N=5000",
+            "datagen_max_games" : 100000000
         }
     }
 }
