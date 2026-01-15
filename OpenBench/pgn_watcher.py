@@ -64,8 +64,7 @@ class PGNWatcher(threading.Thread):
 
             try: # Never exit on errors, to keep the watcher alive
                 for pgn in PGN.objects.filter(processed=False):
-                    try: self.process_pgn(pgn)
-                    except: traceback.print_exc()
+                    self.process_pgn(pgn)
 
             # Expect the database to be locked sometimes
             except OperationalError as error:
